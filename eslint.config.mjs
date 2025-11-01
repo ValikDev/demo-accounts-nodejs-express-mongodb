@@ -28,19 +28,57 @@ export default defineConfig([
       'simple-import-sort': simpleImportSort
     },
     rules: {
-      // Stylistic: basic stylistic preferences (plugin available via plugins)
       '@stylistic/semi': ['error', 'always'],
       '@stylistic/quotes': ['error', 'single'],
+
       '@stylistic/indent': ['error', 2],
+      '@stylistic/no-trailing-spaces': 'error',
+
+      '@stylistic/keyword-spacing': ['error', {
+        before: true,
+        after: true
+      }],
+      '@stylistic/space-before-blocks': ['error', 'always'],
+      '@stylistic/padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: '*', next: 'return' },
+        { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+        { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+        { blankLine: 'always', prev: 'directive', next: '*' },
+        { blankLine: 'always', prev: 'block-like', next: '*' },
+        { blankLine: 'always', prev: '*', next: 'block-like' }
+      ],
+
       '@stylistic/object-curly-spacing': ['error', 'always'],
-
-      // Require braces for all control statements
-      // See: https://eslint.org/docs/latest/rules/curly
       curly: ['error', 'all'],
+      '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: false }],
 
-      // Import sorting
+      '@stylistic/max-len': ['error', {
+        code: 120,
+        ignoreComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true
+      }],
+
+      '@stylistic/multiline-ternary': ['error', 'always-multiline'],
+
       'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error'
+      'simple-import-sort/exports': 'error',
+
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'ExportDefaultDeclaration',
+          message: 'Default exports are not allowed. Use named exports instead.'
+        }
+      ],
+    }
+  },
+  {
+    files: ['eslint.config.mjs'],
+    rules: {
+      'no-restricted-syntax': 'off'
     }
   },
   {

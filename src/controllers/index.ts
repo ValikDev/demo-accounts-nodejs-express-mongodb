@@ -1,3 +1,3 @@
 export * from './createAccount';
-export * from './getAccountById';
+export * from './getAccountStatistics';
 export * from './updateAccount';

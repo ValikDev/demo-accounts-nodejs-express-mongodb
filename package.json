@@ -1,5 +1,5 @@
 {
-  "name": "collections-service",
+  "name": "accounts-service",
   "version": "0.1.0",
   "private": true,
   "main": "dist/server.js",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "express": "^5.1.0",
+    "mongodb": "^6.20.0",
     "zod": "^4.1.12"
   },
   "devDependencies": {

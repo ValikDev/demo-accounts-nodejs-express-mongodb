@@ -11,12 +11,8 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "baseUrl": "./src",
-    "paths": {
-      "@modules/*": ["modules/*"],
-      "@shared/*": ["shared/*"],
-      "@config/*": ["config/*"]
-    }
   },
   "include": ["src/**/*"],
+  "files": ["src/index.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
