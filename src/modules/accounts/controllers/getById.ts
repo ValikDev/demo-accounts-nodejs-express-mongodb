@@ -4,7 +4,7 @@ import { getAccountById } from '../services/getAccountById';
 
 export async function getById(req: Request, res: Response, next: NextFunction) {
   try {
-    const id = req.params.id as string;
+    const id = req.params.id;
     const item = await getAccountById(id);
     if (!item) {
       return res.status(404).json({ error: 'Not found' });
