@@ -30,6 +30,7 @@ export default defineConfig([
     rules: {
       '@stylistic/semi': ['error', 'always'],
       '@stylistic/quotes': ['error', 'single'],
+      'comma-spacing': ['error', { before: false, after: true }],
 
       '@stylistic/indent': ['error', 2],
       '@stylistic/no-trailing-spaces': 'error',

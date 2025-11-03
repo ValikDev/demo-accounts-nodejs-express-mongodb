@@ -9,6 +9,7 @@ export const app = express();
 app.use(express.json());
 
 const accountsRouter = Router();
+
 accountsRouter.post('/', validateAccountPayload, createAccount);
 accountsRouter.put('/:id', validateAccountIdParam, validateAccountPayload, updateAccount);
 accountsRouter.get('/stat', getAccountStatistics);

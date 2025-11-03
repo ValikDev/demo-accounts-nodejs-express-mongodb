@@ -1,4 +1,4 @@
-import { NextFunction,Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { ObjectId } from 'mongodb';
 
 export function validateAccountIdParam(req: Request, res: Response, next: NextFunction) {
