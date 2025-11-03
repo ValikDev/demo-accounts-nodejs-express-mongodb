@@ -1,7 +1,8 @@
-import { env } from 'config/env';
 import { MongoClient } from 'mongodb';
-import { Collections } from 'types';
-import { logger } from 'utils/logger';
+
+import { env } from '../config/env';
+import { Collections } from '../types';
+import { logger } from '../utils/logger';
 
 const MONGO_DB_CONNECTION_TIMEOUT_MS = 2500;
 

@@ -74,6 +74,21 @@ export default defineConfig([
           message: 'Default exports are not allowed. Use named exports instead.'
         }
       ],
+
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            'config/*',
+            'controllers/*',
+            'db/*',
+            'middlewares/*',
+            'repositories/*',
+            'types/*',
+            'utils/*',
+          ],
+        },
+      ],
     }
   },
   {

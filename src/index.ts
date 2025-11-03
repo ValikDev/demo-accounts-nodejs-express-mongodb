@@ -1,8 +1,9 @@
-import { env } from 'config/env';
-import { createAccount, getAccountStatistics, updateAccount } from 'controllers';
 import express, { Router } from 'express';
-import { errorHandler, validateAccountIdParam, validateAccountPayload } from 'middlewares';
-import { logger } from 'utils/logger';
+
+import { env } from './config/env';
+import { createAccount, getAccountStatistics, updateAccount } from './controllers';
+import { errorHandler, validateAccountIdParam, validateAccountPayload } from './middlewares';
+import { logger } from './utils/logger';
 
 export const app = express();
 

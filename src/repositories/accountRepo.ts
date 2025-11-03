@@ -1,6 +1,7 @@
-import { getCollection } from 'db/mongodb';
 import { ObjectId } from 'mongodb';
-import { Account, AccountPayload, AccountScopes } from 'types';
+
+import { getCollection } from '../db/mongodb';
+import { Account, AccountPayload, AccountScopes } from '../types';
 
 const ACCOUNTS_COLLECTION = 'accounts';
 

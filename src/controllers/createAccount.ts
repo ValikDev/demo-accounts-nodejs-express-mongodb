@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { accountRepo } from 'repositories/accountRepo';
+
+import { accountRepo } from '../repositories/accountRepo';
 
 export async function createAccount(req: Request, res: Response, next: NextFunction) {
   try {

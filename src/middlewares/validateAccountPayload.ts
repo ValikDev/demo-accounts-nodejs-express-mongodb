@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { AccountPayloadSchema } from 'types';
+import { AccountPayloadSchema } from '../types';
 import { z } from 'zod';
 
 export function validateAccountPayload(req: Request, res: Response, next: NextFunction) {
