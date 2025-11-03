@@ -7,10 +7,6 @@ export async function getAccountStatistics(_req: Request, res: Response, next: N
     // but in a real-world scenario, we would use a service layer
     const stats = await accountRepo.getStatistics();
 
-    if (!stats) {
-      return res.status(500).json({ error: 'Statistics are currently unavailable' });
-    }
-
     res.json(stats);
   } catch (err) {
     next(err);

@@ -56,7 +56,7 @@ async function update(id: string, payload: AccountPayload): Promise<Account | nu
   return result;
 }
 
-async function getStatistics(): Promise<AccountStatistics | null> {
+async function getStatistics(): Promise<AccountStatistics> {
   const collection = await getCollection(ACCOUNTS_COLLECTION);
 
   const stats = await collection.aggregate<AccountStatistics>([

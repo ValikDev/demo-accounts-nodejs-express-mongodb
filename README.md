@@ -57,7 +57,7 @@ npm start
 The following environment variables can be configured:
 
 - `ENV`: Select environment (default: `Development`) - does nothing for the moment
-- `PORT`: Specify port to run the service (defailt: `3000`)
+- `PORT`: Specify port to run the service (default: `3000`)
 - `MONGODB_URI`: MongoDB connection string (default: `mongodb://root:example@localhost:27017` which is met with [docker compose file](./docker-compose.yml))
 - `DB_NAME`: Database name (default: `demo_db` which is met with [init script](./scripts/mongodb/init.js))
 
@@ -69,7 +69,7 @@ The database is initialized with the following:
 
 - Collection: `accounts`
 - Indexes:
-  - `scope`: For agregating by account scope
+  - `scope`: For aggregating by account scope
 
 ## Post notes
 
@@ -133,6 +133,6 @@ Expected response similar to
   "name": "Chris",
   "scope": "child",
   "createdAt": "2025-11-02T22:00:00.123Z",
-  "createdAt": "2025-11-02T22:00:05.432Z",
+  "updatedAt": "2025-11-02T22:00:05.432Z",
 }
 ```
