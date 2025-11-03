@@ -16,7 +16,7 @@ const DEFAULT_PORT = 3000;
 // Define default MongoDB connection values for simplicity
 // In a real-world scenario, these would typically be received from environment variables on deployment
 const DEFAULT_MONGODB_URI = 'mongodb://root:example@localhost:27017';
-const DEFAULT_MONGO_DB_NAME = 'collections_db';
+const DEFAULT_MONGO_DB_NAME = 'demo_db';
 
 function validateNodeEnv(env: string | undefined): NodeEnv {
   return Object.values(NodeEnv).includes(env as NodeEnv)
