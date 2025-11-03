@@ -1,6 +1,6 @@
-# Node.js + Express + TypeScript API
+# Demo: Accounts API
 
-A modular, scalable Express API built with TypeScript and ESLint Stylistic, using MongoDB for data storage.
+A scalable API built on Node.js + Express with TypeScript and ESLint Stylistic, using MongoDB for data storage.
 
 ## Prerequisites
 
@@ -61,7 +61,7 @@ The following environment variables can be configured:
 - `MONGODB_URI`: MongoDB connection string (default: `mongodb://root:example@localhost:27017` which is met with [docker compose file](./docker-compose.yml))
 - `DB_NAME`: Database name (default: `demo_db` which is met with [init script](./scripts/mongodb/init.js))
 
-See [env file](./src/config/env.ts) for the details.
+See [env file](./src/config/env.ts) for details.
 
 ## MongoDB Structure
 
@@ -133,6 +133,6 @@ Expected response similar to
   "name": "Chris",
   "scope": "child",
   "createdAt": "2025-11-02T22:00:00.123Z",
-  "updatedAt": "2025-11-02T22:00:05.432Z",
+  "updatedAt": "2025-11-02T22:00:05.432Z"
 }
 ```
